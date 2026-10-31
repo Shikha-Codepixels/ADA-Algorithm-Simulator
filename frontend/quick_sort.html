@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quick Sort | AlgoViz</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <span>◇</span> AlgoViz
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Algorithms</a>
+            <a href="index.html#about">About</a>
+        </div>
+
+    </nav>
+
+
+    <main class="visualizer-page">
+
+        <div class="visualizer-header">
+
+            <a href="index.html" class="back-link">
+                ← Back to Algorithms
+            </a>
+
+            <p class="eyebrow">
+                DIVIDE &amp; CONQUER
+            </p>
+
+            <h1>Quick Sort</h1>
+
+            <p class="visualizer-description">
+                Watch Quick Sort partition an array around a pivot
+                and recursively sort the resulting sections.
+            </p>
+
+        </div>
+
+
+        <section class="input-section">
+
+            <label for="arrayInput">
+                Enter your array
+            </label>
+
+            <div class="input-row">
+
+                <input
+                    type="text"
+                    id="arrayInput"
+                    placeholder="e.g. 33, 66, 77, 10, 32"
+                >
+
+                <button id="visualizeBtn">
+                    Visualize
+                </button>
+
+            </div>
+
+            <p class="input-hint">
+                Enter numbers separated by commas.
+            </p>
+
+        </section>
+
+
+        <section class="visualization-panel">
+
+            <div class="visualization-top">
+
+                <div>
+
+                    <span class="step-label">
+                        CURRENT STEP
+                    </span>
+
+                    <h2 id="stepTitle">
+                        Ready
+                    </h2>
+
+                </div>
+
+                <div class="step-counter">
+
+                    <span id="stepNumber">
+                        0
+                    </span>
+
+                    /
+                    
+                    <span id="totalSteps">
+                        0
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="recursion-path"
+                id="recursionPath"
+            >
+
+                <span class="path-label">
+                    RECURSION PATH
+                </span>
+
+                <div
+                    class="path-content"
+                    id="pathContent"
+                >
+                    Main Array
+                </div>
+
+            </div>
+
+            <div class="view-switcher quick-view-switcher">
+
+                <button
+                    id="arrayViewBtn"
+                    class="quick-view-btn active"
+                    type="button"
+                >
+                    Array View
+                </button>
+
+                <button
+                    id="treeViewBtn"
+                    class="quick-view-btn"
+                    type="button"
+                >
+                    Tree View
+                </button>
+
+            </div>
+
+            <div
+                class="array-visualization"
+                id="arrayVisualization"
+            >
+
+                <div class="empty-state">
+                    Enter an array to begin visualization.
+                </div>
+
+            </div>
+
+            <div
+                class="tree-visualization"
+                id="treeVisualization"
+                style="display: none;"
+            >
+                <div class="empty-state">
+                    Generate a Quick Sort visualization to see its recursion tree.
+                </div>
+            </div>
+
+
+            <div class="controls">
+
+                <button
+                    class="secondary-btn"
+                    id="prevBtn"
+                    disabled
+                >
+                    ← Previous
+                </button>
+
+                <button
+                    id="nextBtn"
+                    disabled
+                >
+                    Next →
+                </button>
+
+                <button
+                    class="secondary-btn"
+                    id="playBtn"
+                    disabled
+                >
+                    ▶ Play
+                </button>
+
+                <button
+                    class="secondary-btn"
+                    id="resetBtn"
+                    disabled
+                >
+                    ↻ Reset
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="info-grid">
+
+            <div class="info-card">
+
+                <h3>Complexity</h3>
+
+                <div class="complexity-row">
+                    <span>Best</span>
+                    <strong>O(n log n)</strong>
+                </div>
+
+                <div class="complexity-row">
+                    <span>Average</span>
+                    <strong>O(n log n)</strong>
+                </div>
+
+                <div class="complexity-row">
+                    <span>Worst</span>
+                    <strong>O(n²)</strong>
+                </div>
+
+                <div class="complexity-row">
+                    <span>Space</span>
+                    <strong>O(log n)</strong>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>How It Works</h3>
+
+                <h3>
+                    Pivot → Partition → Recursively Sort
+                </h3>
+
+                <ol>
+
+                    <li>
+                        Select an element as the pivot.
+                    </li>
+
+                    <li>
+                        Partition the array around the pivot.
+                    </li>
+
+                    <li>
+                        Recursively sort the left and right partitions.
+                    </li>
+
+                </ol>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/quick-sort.js"></script>
+
+</body>
+
+</html>

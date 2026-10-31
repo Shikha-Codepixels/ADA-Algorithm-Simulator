@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Merge Sort | AlgoViz</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <span>◈</span> AlgoViz
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Algorithms
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <main class="visualizer-page">
+
+
+        <section class="visualizer-header">
+
+            <a
+                href="index.html#algorithms"
+                class="back-link"
+            >
+                ← Back to Algorithms
+            </a>
+
+
+            <p class="eyebrow">
+                DIVIDE & CONQUER
+            </p>
+
+
+            <h1>
+                Merge Sort
+            </h1>
+
+
+            <p class="visualizer-description">
+                Watch an array divide recursively and
+                merge back into sorted order.
+            </p>
+
+        </section>
+
+
+        <section class="input-section">
+
+            <label for="arrayInput">
+                Enter your array
+            </label>
+
+
+            <div class="input-row">
+
+                <input
+                    type="text"
+                    id="arrayInput"
+                    placeholder="44, 21, 75, 66"
+                >
+
+
+                <button id="visualizeBtn">
+                    Visualize
+                </button>
+
+            </div>
+
+
+            <p class="input-hint">
+                Enter numbers separated by commas.
+            </p>
+
+        </section>
+
+
+        <section class="visualization-panel">
+
+            <div class="view-switcher">
+                <button id="arrayViewBtn" class="view-btn active">
+                    Array View 
+                </button>
+
+                <button id="treeViewBtn" class="view-btn">
+                    Tree View 
+                </button>
+            </div>
+
+            <div class="visualization-top">
+
+                <div>
+
+                    <span class="step-label">
+                        CURRENT STEP
+                    </span>
+
+                    <h2 id="stepTitle">
+                        Ready
+                    </h2>
+
+                </div>
+
+
+                <div class="step-counter">
+
+                    <span id="stepNumber">
+                        0
+                    </span>
+
+                    /
+                    
+                    <span id="totalSteps">
+                        0
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="recursion-path" id="recursionPath">
+                <span class="path-label">RECURSION PATH</span>
+                <div class="path-content" id="pathContent">
+                    MAIN ARRAY
+                </div>
+            </div>
+            
+            <div class="visualization-container">
+
+                <div class="array-visualization" id="arrayVisualization">
+                    <p class="empty-state">
+                        Enter an array and click
+                        <strong>Visualize</strong>
+                        to begin.
+                    </p>
+                </div>
+
+                <div class="tree-visualization hidden" id="treeVisualization">
+                    <p class="empty-state">
+                        Tree visualization will appear here.
+                    </p>
+                </div>
+                
+            </div>
+
+
+            <div class="controls">
+
+                <button id="previousBtn" class="secondary-btn" disabled>
+                    ← Previous
+                </button>
+
+
+                <button id="nextBtn" disabled>
+                    Next →
+                </button>
+
+
+                <button id="playBtn" class="secondary-btn" disabled>
+                    ▶ Play
+                </button>
+
+
+                <button id="resetBtn" class="secondary-btn" disabled>
+                    ↻ Reset
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="info-grid">
+
+
+            <div class="info-card">
+
+                <p class="eyebrow">
+                    COMPLEXITY
+                </p>
+
+                <h3>
+                    Time Complexity
+                </h3>
+
+                <div class="complexity-row">
+                    <span>Best</span>
+                    <strong>O(n log n)</strong>
+                </div>
+
+                <div class="complexity-row">
+                    <span>Average</span>
+                    <strong>O(n log n)</strong>
+                </div>
+
+                <div class="complexity-row">
+                    <span>Worst</span>
+                    <strong>O(n log n)</strong>
+                </div>
+
+                <div class="complexity-row">
+                    <span>Space</span>
+                    <strong>O(n)</strong>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <p class="eyebrow">
+                    HOW IT WORKS
+                </p>
+
+                <h3>
+                    Divide → Sort → Merge
+                </h3>
+
+                <ol>
+
+                    <li>
+                        Divide the array into two halves.
+                    </li>
+
+                    <li>
+                        Recursively divide each half.
+                    </li>
+
+                    <li>
+                        Merge the sorted halves.
+                    </li>
+
+                </ol>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+
+        <p>
+            AlgoViz — ADA Algorithm Simulator
+        </p>
+
+    </footer>
+
+
+    <script src="js/merge-sort.js"></script>
+
+</body>
+
+</html>

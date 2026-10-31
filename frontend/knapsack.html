@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Knapsack | AlgoViz</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <span>◇</span> AlgoViz
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Algorithms</a>
+            <a href="index.html#about">About</a>
+        </div>
+
+    </nav>
+
+    <main class="visualizer-page">
+
+        <div class="visualizer-header">
+
+            <a href="index.html" class="back-link">
+                ← Back to Algorithms
+            </a>
+
+            <p class="eyebrow">DYNAMIC PROGRAMMING</p>
+
+            <h1>0/1 Knapsack</h1>
+
+            <p class="visualizer-description">
+                Watch how Dynamic Programming finds the
+                maximum value within a given weight capacity.
+            </p>
+
+        </div>
+
+        <section class="input-section">
+
+            <label for="weightsInput">Item weights</label>
+
+            <div class="input-row">
+                <input
+                    type="text"
+                    id="weightsInput"
+                    placeholder="e.g. 2, 1, 3"
+                >
+            </div>
+
+            <label for="valuesInput">Item values</label>
+
+            <div class="input-row">
+                <input
+                    type="text"
+                    id="valuesInput"
+                    placeholder="e.g. 3, 2, 4"
+                >
+            </div>
+
+            <label for="capacityInput">Knapsack capacity</label>
+
+            <div class="input-row">
+
+                <input
+                    type="number"
+                    id="capacityInput"
+                    placeholder="e.g. 4"
+                    min="0"
+                >
+
+                <button id="visualizeBtn">
+                    Visualize
+                </button>
+
+            </div>
+
+            <p class="input-hint">
+                Enter comma-separated weights and values.
+                Both lists must have the same number of items.
+            </p>
+
+        </section>
+
+        <section class="visualization-panel">
+
+            <div class="visualization-top">
+
+                <div>
+
+                    <span class="step-label">CURRENT STEP</span>
+
+                    <h2 id="stepTitle">Ready</h2>
+
+                </div>
+
+                <div class="step-counter">
+
+                    <span id="stepNumber">0</span>
+                    /
+                    <span id="totalSteps">0</span>
+
+                </div>
+
+            </div>
+
+            <div class="knapsack-info" id="knapsackInfo">
+
+                <span>Items: —</span>
+                <span>Capacity: —</span>
+
+            </div>
+
+            <div
+                class="knapsack-table-container"
+                id="dpTableContainer"
+            >
+
+                <div class="empty-state">
+                    Enter your items to begin visualization.
+                </div>
+
+            </div>
+
+            <div class="decision-info" id="decisionInfo">
+                Waiting for input...
+            </div>
+            
+            <div class="selected-items-panel" id="selectedItemsPanel">
+                <h3>Optimal Item Selection</h3>
+                <p>Complete the visualization to see the selected items.</p>
+            </div>
+
+            <div class="controls">
+
+                <button
+                    class="secondary-btn"
+                    id="prevBtn"
+                    disabled
+                >
+                    ← Previous
+                </button>
+
+                <button id="nextBtn" disabled>
+                    Next →
+                </button>
+
+                <button
+                    class="secondary-btn"
+                    id="playBtn"
+                    disabled
+                >
+                    ▶ Play
+                </button>
+
+                <button
+                    class="secondary-btn"
+                    id="resetBtn"
+                    disabled
+                >
+                    ↻ Reset
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="info-grid">
+
+            <div class="info-card">
+
+                <h3>Complexity</h3>
+
+                <div class="complexity-row">
+                    <span>Time</span>
+                    <strong>O(n × W)</strong>
+                </div>
+
+                <div class="complexity-row">
+                    <span>Space</span>
+                    <strong>O(n × W)</strong>
+                </div>
+
+            </div>
+
+            <div class="info-card">
+
+                <h3>How It Works</h3>
+
+                <ol>
+                    <li>Create a DP table.</li>
+                    <li>Compare including and excluding each item.</li>
+                    <li>Store the maximum achievable value.</li>
+                    <li>Trace back to identify selected items.</li>
+                </ol>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/knapsack.js"></script>
+
+</body>
+</html>

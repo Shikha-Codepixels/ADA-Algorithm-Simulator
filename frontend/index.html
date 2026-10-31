@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AlgoViz | Algorithm Visualizer</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span>◈</span> AlgoViz
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Algorithms</a>
+            <a href="#">About</a>
+        </div>
+    </nav>
+
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    DESIGN & ANALYSIS OF ALGORITHMS
+                </p>
+
+                <h1>
+                    See algorithms<br>
+                    come to life.
+                </h1>
+
+                <p class="hero-description">
+                    Explore classic algorithms through interactive,
+                    step-by-step visualizations and understand how they work.
+                </p>
+
+                <button id="exploreBtn">
+                    Explore Algorithms 
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="algorithms" id="algorithms">
+
+            <div class="section-heading">
+                <p class="eyebrow">EXPLORE</p>
+
+                <h2>
+                    Choose an algorithm
+                </h2>
+                <p>Learn by watching algorithms execute step by step.</p>
+            </div>
+
+
+            <div class="algorithm-grid">
+
+                <article class="algorithm-card">
+                    <span class="category">
+                        DIVIDE & CONQUER
+                    </span>
+
+                    <h3>Merge Sort</h3>
+
+                    <p>
+                        Watch an array divide recursively
+                        and merge into sorted order.
+                    </p>
+
+                    <button onclick="openAlgorithm('merge-sort')">
+                        Visualize →
+                    </button>
+                </article>
+
+
+                <article class="algorithm-card">
+                    <span class="category">
+                        DIVIDE & CONQUER
+                    </span>
+
+                    <h3>Quick Sort</h3>
+
+                    <p>
+                        Explore pivot selection and
+                        recursive partitioning.
+                    </p>
+
+                    <button onclick="window.location.href='quick_sort.html'">
+                        Visualize →
+                    </button>
+                </article>
+
+
+                <article class="algorithm-card">
+                    <span class="category">
+                        GREEDY
+                    </span>
+
+                    <h3>Huffman Coding</h3>
+
+                    <p>
+                        Build a Huffman tree through
+                        greedy frequency selection.
+                    </p>
+
+                    <button onclick="openAlgorithm('huffman')">
+                        Visualize →
+                    </button>
+                </article>
+
+
+                <article class="algorithm-card">
+                    <span class="category">
+                        DYNAMIC PROGRAMMING
+                    </span>
+
+                    <h3>0/1 Knapsack</h3>
+
+                    <p>
+                        Watch the DP table build toward
+                        the optimal solution.
+                    </p>
+
+                    <button onclick="openAlgorithm('knapsack')">
+                        Visualize →
+                    </button>
+                </article>
+
+
+                <article class="algorithm-card">
+                    <span class="category">
+                        GREEDY
+                    </span>
+
+                    <h3>Dijkstra</h3>
+
+                    <p>
+                        Visualize shortest paths through
+                        a weighted graph.
+                    </p>
+
+                    <button onclick="openAlgorithm('dijkstra')">
+                        Visualize →
+                    </button>
+                </article>
+
+
+                <article class="algorithm-card">
+                    <span class="category">
+                        GRAPH
+                    </span>
+
+                    <h3>Bellman-Ford</h3>
+
+                    <p>
+                        Follow edge relaxation and
+                        negative-cycle detection.
+                    </p>
+
+                    <button onclick="openAlgorithm('bellman-ford')">
+                        Visualize →
+                    </button>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="about" id="about">
+            <p class="eyebrow">ABOUT</p>
+
+            <h2>
+                Algorithms are easier when you can see them.
+            </h2>
+
+            <p>
+                AlgoViz is an interactive learning platform designed
+                to make Design and Analysis of Algorithms easier to 
+                understand through step-by-step execution.
+            </p>
+
+        </section>
+    </main>
+
+
+    <footer>
+        <p>AlgoViz — ADA Algorithm Simulator</p>
+    </footer>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
